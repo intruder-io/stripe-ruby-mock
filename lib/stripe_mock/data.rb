@@ -1138,5 +1138,31 @@ module StripeMock
         transfer_group: nil
       }.merge(params)
     end
+
+    def self.mock_setup_intent(params = {})
+      setup_intent_id = params[:id] || "seti_1EwXFB2eZvKYlo2CggNnFBo8"
+      {
+        id: setup_intent_id,
+        object: "setup_intent",
+        application: nil,
+        cancellation_reason: nil,
+        client_secret: "seti_1FC4PhLBf3RKKnA7SbbWyu1u_secret_FhTMHOmFxslNrJ1YNMW6dZAFeCt78Md",
+        created: 1566911325,
+        customer: nil,
+        description: nil,
+        last_setup_error: nil,
+        livemode: false,
+        metadata: {},
+        next_action: nil,
+        on_behalf_of: nil,
+        payment_method: nil,
+        payment_method_options: nil,
+        payment_method_types: [
+          "card"
+        ],
+        status: "requires_action",
+        usage: "off_session"
+      }.merge(params)
+    end
   end
 end
